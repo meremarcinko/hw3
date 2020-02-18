@@ -1,0 +1,91 @@
+<!---Meredith Marcinko--->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheets/marcinko21.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src ="javascripts/hw3_javascript.js"></script>
+
+ 
+</head>
+<body>
+
+<h1>Cheesecake Order Form</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" 
+width="250" height="250">
+
+ 
+<table id="table">
+  <tr>
+    <!---headings for the title--->
+    <td>Quantity</td>
+    <td>Topping</td>
+  </tr>
+
+  <tr>
+    <td>
+      <!--dropdown menu-->
+      <select id="amount">
+        <option id="one" value="1">1</option>
+        <option id="two" value="2">2</option>
+        <option id="three" value="3">3</option>
+      </select>
+    </td>
+    <td>
+      <form>
+      <!--radio buttons-->
+      <input id="plain" type="radio" name="cheesecake" value="plain"> Plain<br>
+      <input id="cherry" type="radio" name="cheesecake" value="cherry"> Cherry<br>
+      <input id="chocolate" type="radio" name="cheesecake" value="chocolate"> Chocolate<br>
+      </form>
+    </td>
+  </tr>
+
+
+
+<p id="notes">Notes:</p>
+  <textarea id="textarea" rows="4" cols="50">Enter any special instructions here.
+  </textarea>
+
+
+<br>
+<!--Order button-->
+
+<button onclick="order()">Order</button>
+<!--<input type="submit" class="order" value="Order" onClick="order()">-->
+
+</table>
+<p2 id="notes">Orders for:</p2>
+<br>
+<!--dropdown menu for months-->
+<div class="dropdown">
+  <button id="drop" class="dropbtn">Jan</button>
+  <div class="dropdown-content">
+    <a class="month" href="#" onClick="updateMonth('Jan')">Jan</a>
+    <a class="month" href="#" onClick="updateMonth('Feb')">Feb</a>
+    <a class="month" href="#" onClick="updateMonth('Mar')">Mar</a>
+    <a class="month" href="#" onClick="updateMonth('Apr')">Apr</a>
+    <a class="month" href="#" onClick="updateMonth('May')">May</a>
+    <a class="month" href="#" onClick="updateMonth('Jun')">June</a>
+    <a class="month" href="#" onClick="updateMonth('Jul')">July</a>
+    <a class="month" href="#" onClick="updateMonth('Aug')">Aug</a>
+    <a class="month" href="#" onClick="updateMonth('Sep')">Sep</a>
+    <a class="month" href="#" onClick="updateMonth('Oct')">Oct</a>
+    <a class="month" href="#" onClick="updateMonth('Nov')">Nov</a>
+    <a class="month" href="#" onClick="updateMonth('Dec')">Dec</a>
+  </div>
+</div>
+		
+
+  <ul>
+    <li>11 cherry</li>
+    <li>17 chocolate</li>
+    <li>31 plain</li>
+  </ul>
+
+
+
+</body>
+</html>
