@@ -1,14 +1,8 @@
 //Meredith Marcinko
 
-var testFunction = require('../routes/function.js');
+const objects = require("../routes/orders.js");
 
-var none = {};
-var singleItem = {0: {topping: "cherry", quantity: 2}};
-var multiple = {0: {topping: "cherry", quantity: 2}, 1: {topping: "plain", quantity: 6}, 2: {topping: "chocolate", quantity: 3}};
-
-
-test('should test if the objects were converted to the array', () => {
-	expect(testFunction.testFunction(none)).toEqual([{}]);
-	expect(testFunction.testFunction(singleItem)).toEqual([{0: {topping: "cherry", quantity: 2}}]);
-	expect(testFunction.testFunction(multiple)).toEqual([{0: {topping: "cherry", quantity: 2}, 1: {topping: "plain", quantity: 6}, 2: {topping: "chocolate", quantity: 3}}]);
+test('order testing', ()=> {
+	var objArr = objects.objectArray;
+	expect(objArr).toBe("{\"a\":{\"topping\":\"cherry\",\"quantity\":2},\"b\":{\"topping\":\"chocolate\",\"quantity\":3},\"c\":{\"topping\":\"plain\",\"quantity\":6}}");
 });
